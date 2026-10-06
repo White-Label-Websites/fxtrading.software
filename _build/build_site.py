@@ -10,6 +10,7 @@ UPDATED = "5 October 2026"
 SITE = {'domain': 'fxtrading.software',
  'brand': 'FX Trading',
  'script': 947,
+ 'ga': '',
  'theme': '#f6f3ef',
  'title': 'Forex Trading Simulator: Test Your Strategy on Live Prices, Free | FX Trading',
  'desc': 'A free forex trading simulator: run your strategy on live currency prices with a virtual $10,000 '
@@ -22,15 +23,17 @@ SITE = {'domain': 'fxtrading.software',
  'how_title': 'From a forex idea to a live record in four steps',
  'stages': [('Choose your pairs', 'Pick the currency pairs your strategy trades.'),
             ('Set the rules', 'Entry, exit and how much of the balance each trade uses.'),
-            ('Check the backtest', 'See how the rules would have behaved on past prices.'),
             ('Run it live',
-             'The robot trades live forex prices with a virtual $10,000 under fixed loss limits.')],
+             'The robot trades live forex prices with a virtual $10,000 under fixed loss limits.'),
+            ('Climb or rebuild',
+             'Hit the target to move up a level. Break a limit and the challenge ends, so you adjust the '
+             'rules and start again.')],
  'faq': [('Is this a forex demo account?',
           'It works like one: a virtual balance on live prices. The difference is that every robot runs '
           'under fixed loss limits and three levels, so you get a clear verdict on the strategy.'),
          ('Why test a forex strategy on live prices?',
-          'Because a backtest only replays the past. Spreads, news and quiet sessions behave differently in '
-          'real time, and loss limits show whether the strategy survives them.')],
+          'Because past charts already contain the answer. Spreads, news and quiet sessions behave '
+          'differently in real time, and fixed loss limits show whether the strategy survives them.')],
  'closing': 'Your forex strategy looks good on paper. See how it trades live.',
  'risk': 'Forex and leveraged trading are high risk.'}
 
@@ -38,7 +41,7 @@ D = SITE["domain"]; B = SITE["brand"]; URL = f"https://{D}"
 
 FOOTER = f"""<footer class="foot">
   <div class="wrap">
-    <nav aria-label="Footer"><a href="/contact/">Contact</a><a href="/terms/">Terms</a><a href="/privacy-policy/">Privacy</a><a href="/legal-notice/">Legal notice</a></nav>
+    <nav aria-label="Footer"><a href="/contact/">Contact</a><a href="/terms/">Terms</a><a href="/privacy-policy/">Privacy</a><a href="/legal-notice/">Legal notice</a><a href="/privacy-policy/#cookies" data-cookie-settings>Cookie settings</a></nav>
     <p class="copy">&copy; 2026 {B}</p>
     <small>Educational simulator. All balances are virtual and no real money is traded. Nothing on this site is financial advice. {SITE["risk"]} Results on virtual money do not predict real results. Sign-up is handled by our partner AFFCOIN, and we may receive a commission when you open an account.</small>
   </div>
@@ -68,6 +71,7 @@ def head(title, desc, path, jsonld=""):
 <link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/consent.js" data-ga="{SITE["ga"]}"></script>
 {jsonld}</head>
 <body>
 """
@@ -291,18 +295,20 @@ page("privacy-policy", "Legal", "Privacy policy", f"Privacy policy | {B}",
           <tr><td>You visit any page</td><td>IP address, browser, pages requested (technical logs)</td><td>Deliver the site and keep it secure</td><td>Legitimate interest</td></tr>
         </tbody>
       </table>
-      <p>We do not sell your data, and this site uses no analytics or advertising cookies.</p>
+      <p>We do not sell your data and we do not run advertising trackers on this site. Analytics only uses cookies if you accept them (see section 5).</p>
       <h2>3. Who receives it</h2>
       <ul>
         <li><strong>AFFCOIN</strong> and the providers it works with, for everything you type in the sign-up form, sent directly from your browser to its servers.</li>
         <li><strong>Cloudflare</strong>, which relays contact-form messages to our mailbox.</li>
         <li><strong>GitHub</strong>, which hosts the site and keeps technical access logs.</li>
+        <li><strong>Google</strong> (Google Analytics), only if you accept analytics cookies: pages viewed, approximate location, device and browser, used to count visits. IP addresses are not stored by Google Analytics 4. Data may be processed in the United States under the EU-US Data Privacy Framework.</li>
       </ul>
       <p>Some of these providers are based in the United States. Transfers rely on the safeguards they offer, such as the EU-US Data Privacy Framework or standard contractual clauses.</p>
       <h2>4. How long we keep it</h2>
       <p>Contact messages are kept for up to 3 years after our last exchange, then deleted. Account data is kept by AFFCOIN for as long as your account is open and then according to its policy.</p>
       <h2 id="cookies">5. Cookies</h2>
-      <p>This site sets no cookies of its own. The sign-up widget, loaded from affcoin.com, may store what it needs to run the form and your session. Those cookies are covered by AFFCOIN&rsquo;s policy.</p>
+      <p>We use Google Analytics cookies (<code>_ga</code>, <code>_ga_*</code>, kept up to 13 months) to count visits and see which pages are useful. They are set only after you click &ldquo;Accept&rdquo; in the cookie banner. If you decline, Google Analytics runs without cookies and receives no identifier for you. We do not use advertising cookies. Your choice is stored in your browser and you can change it at any time with the <a href="/privacy-policy/#cookies" data-cookie-settings>cookie settings</a> link at the bottom of every page.</p>
+      <p>Our fonts are served from our own host. The sign-up widget, loaded from affcoin.com, may store what it needs to run the form and your session. Those cookies are covered by AFFCOIN&rsquo;s policy.</p>
       <h2>6. Your rights</h2>
       <p>You can ask to access, correct or delete your data, object to its use, restrict it, or receive a copy. To exercise a right, use our <a href="/contact/">contact form</a>, or write to <a href="mailto:support@affcoin.com">support@affcoin.com</a> for account data. You can also complain to your data protection authority.</p>
       <h2>7. Changes</h2>

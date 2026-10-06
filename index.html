@@ -14,8 +14,9 @@
 <link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/consent.js" data-ga=""></script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this a forex demo account?", "acceptedAnswer": {"@type": "Answer", "text": "It works like one: a virtual balance on live prices. The difference is that every robot runs under fixed loss limits and three levels, so you get a clear verdict on the strategy."}}, {"@type": "Question", "name": "Why test a forex strategy on live prices?", "acceptedAnswer": {"@type": "Answer", "text": "Because a backtest only replays the past. Spreads, news and quiet sessions behave differently in real time, and loss limits show whether the strategy survives them."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing. Opening an account asks for no card and no deposit."}}, {"@type": "Question", "name": "Can I win or lose real money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every robot trades a virtual balance. There is no deposit, no withdrawal and no payout: the only thing at stake is your strategy's record."}}, {"@type": "Question", "name": "What stops a test early?", "acceptedAnswer": {"@type": "Answer", "text": "A loss of 5% in a single day, or a total drawdown of 10%. Either one ends the challenge on the spot."}}, {"@type": "Question", "name": "Can I test more than one robot?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each robot gets its own virtual $10,000 balance, so you can compare versions of a strategy side by side."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this a forex demo account?", "acceptedAnswer": {"@type": "Answer", "text": "It works like one: a virtual balance on live prices. The difference is that every robot runs under fixed loss limits and three levels, so you get a clear verdict on the strategy."}}, {"@type": "Question", "name": "Why test a forex strategy on live prices?", "acceptedAnswer": {"@type": "Answer", "text": "Because past charts already contain the answer. Spreads, news and quiet sessions behave differently in real time, and fixed loss limits show whether the strategy survives them."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing. Opening an account asks for no card and no deposit."}}, {"@type": "Question", "name": "Can I win or lose real money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every robot trades a virtual balance. There is no deposit, no withdrawal and no payout: the only thing at stake is your strategy's record."}}, {"@type": "Question", "name": "What stops a test early?", "acceptedAnswer": {"@type": "Answer", "text": "A loss of 5% in a single day, or a total drawdown of 10%. Either one ends the challenge on the spot."}}, {"@type": "Question", "name": "Can I test more than one robot?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each robot gets its own virtual $10,000 balance, so you can compare versions of a strategy side by side."}}]}
 </script>
 </head>
 <body>
@@ -66,8 +67,8 @@
     <ol class="stages">
       <li><span class="stage-n">01</span><h3>Choose your pairs</h3><p>Pick the currency pairs your strategy trades.</p></li>
       <li><span class="stage-n">02</span><h3>Set the rules</h3><p>Entry, exit and how much of the balance each trade uses.</p></li>
-      <li><span class="stage-n">03</span><h3>Check the backtest</h3><p>See how the rules would have behaved on past prices.</p></li>
-      <li class="here"><span class="stage-n">04</span><h3>Run it live</h3><p>The robot trades live forex prices with a virtual $10,000 under fixed loss limits.</p></li>
+      <li><span class="stage-n">03</span><h3>Run it live</h3><p>The robot trades live forex prices with a virtual $10,000 under fixed loss limits.</p></li>
+      <li class="here"><span class="stage-n">04</span><h3>Climb or rebuild</h3><p>Hit the target to move up a level. Break a limit and the challenge ends, so you adjust the rules and start again.</p></li>
     </ol>
   </div>
 </section>
@@ -101,7 +102,7 @@
     </div>
     <div class="qa">
       <details open><summary>Is this a forex demo account?</summary><p>It works like one: a virtual balance on live prices. The difference is that every robot runs under fixed loss limits and three levels, so you get a clear verdict on the strategy.</p></details>
-      <details><summary>Why test a forex strategy on live prices?</summary><p>Because a backtest only replays the past. Spreads, news and quiet sessions behave differently in real time, and loss limits show whether the strategy survives them.</p></details>
+      <details><summary>Why test a forex strategy on live prices?</summary><p>Because past charts already contain the answer. Spreads, news and quiet sessions behave differently in real time, and fixed loss limits show whether the strategy survives them.</p></details>
       <details><summary>How much does it cost?</summary><p>Nothing. Opening an account asks for no card and no deposit.</p></details>
       <details><summary>Can I win or lose real money?</summary><p>No. Every robot trades a virtual balance. There is no deposit, no withdrawal and no payout: the only thing at stake is your strategy's record.</p></details>
       <details><summary>What stops a test early?</summary><p>A loss of 5% in a single day, or a total drawdown of 10%. Either one ends the challenge on the spot.</p></details>
@@ -121,7 +122,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <nav aria-label="Footer"><a href="/contact/">Contact</a><a href="/terms/">Terms</a><a href="/privacy-policy/">Privacy</a><a href="/legal-notice/">Legal notice</a></nav>
+    <nav aria-label="Footer"><a href="/contact/">Contact</a><a href="/terms/">Terms</a><a href="/privacy-policy/">Privacy</a><a href="/legal-notice/">Legal notice</a><a href="/privacy-policy/#cookies" data-cookie-settings>Cookie settings</a></nav>
     <p class="copy">&copy; 2026 FX Trading</p>
     <small>Educational simulator. All balances are virtual and no real money is traded. Nothing on this site is financial advice. Forex and leveraged trading are high risk. Results on virtual money do not predict real results. Sign-up is handled by our partner AFFCOIN, and we may receive a commission when you open an account.</small>
   </div>
